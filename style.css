@@ -9,6 +9,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+    background-position: center;
 
 }
 
@@ -16,6 +17,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 700px) {
+        flex-direction:column;
+    }
 }
 
 .container {
@@ -28,6 +32,7 @@ body {
 .menu {
     gap: 40px;
     display: flex;
+    white-space: no-wrap;
 
     a {
         color: white;
@@ -43,14 +48,26 @@ body {
     display: flex;
     align-items: center;
     margin-top: 0px;
+    justify-content: center;
+
+    @media (max-width:1400px) {
+        flex-direction: column;
+        padding-top: 50px;
+    }
 }
 
 .imgps {
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
+    @media (max-width: 850px) {
+        flex-direction: column;
+
+       max-width: 400px;
+    }
 }
 
 .box1 {
-
+max-width: 400px;
     h1 {
         font-size: 60px;
         margin-bottom: 35px;
